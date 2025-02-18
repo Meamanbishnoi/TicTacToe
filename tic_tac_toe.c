@@ -4,7 +4,7 @@
 #define false 0
 
 int boxNo,player;
-char arr[9]={'0','1','2','3','4','5','6','7','8'};
+char arr[9]={'1','2','3','4','5','6','7','8','9'};
 bool checkWin();
 void showBoard();
 
@@ -18,6 +18,7 @@ int main(){
             printf("Player %dst Turn:\n",player);
             printf("Type Box No:");
             scanf("%d",&boxNo);
+            boxNo--;
             if(boxNo<0 || boxNo>8){ //To check if user types something Invalid
                 puts("Invalid Value...Type again!!");
                 i--; 
@@ -41,6 +42,7 @@ int main(){
             printf("Player %dnd Turn:\n",player);
             printf("Type Box No:");
             scanf("%d",&boxNo);
+            boxNo--;
             if(boxNo<0 || boxNo>8){ //To check if user types something Invalid
                 puts("Invalid Value...Type again!!");
                 i--; 
@@ -94,3 +96,7 @@ void showBoard(){
     printf("      %c     |     %c     |     %c     \n",arr[6],arr[7],arr[8]);
     printf("            |           |           \n");
 }
+
+/*
+Code By: Aman Bishnoi
+*/
